@@ -1,4 +1,4 @@
-Hi gays, I am a engineer in measurement and instruments industry. welcome to my repository!
+Hi gays, I am a engineer in measurement and instrument industry. welcome to my repository!
 
 **About the Account**
 
