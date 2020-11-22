@@ -12,7 +12,7 @@ Currently, I am a engineer in measurement and instrument industry. I have worked
 
 
 
-**Contact**
+**Contact Author**
 
 Personal Web: https://frank-instruments.github.io/
 
