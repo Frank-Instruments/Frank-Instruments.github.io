@@ -1,8 +1,8 @@
-# Wrap Sensor Dll Driver for LabVIEW Call
+# Wrap Sensor DLL Driver for LabVIEW Call
 
-Abstract:
+**Abstract:**
 
-This article describes how to wrap the sensor DLL driver for easily call from LabVIEW. Especially, the DLL has complex data interface: structure pointer including another structure pointer. 
+This article describes how to wrap the sensor DLL driver for easily call from LabVIEW. Especially, the DLL has complex data interface: **structure pointer including another structure pointer**. 
 
 Causes some sensor, instruments and customized equipments only have DLL driver, that is  written by C or C++. If the DLL data interface is complex or C++ class, User must wrap the DLL making another has simple interface data type DLL file, provide to LabVIEW to access and control the device. The LabVIEW can directly call the interface is structure pointer of DLL, corresponding to the LabVIEW cluster data type. But if the structure pointer object including another structure pointer, using cluster including cluster is not work. So this article will use Panasonic HL-C2 sensor Driver DLL as example to wrap to a simple data type interface, then using LabVIEW access the sensor data.
 
@@ -12,7 +12,7 @@ Causes some sensor, instruments and customized equipments only have DLL driver, 
 
 It is from the sensor programing manual.
 
-
+![1599228222625](D:\MyFile\mywrite\MarkdownImageLib\1599228222625.png)
 
 Function Return:
 
@@ -66,7 +66,7 @@ typedef unsigned char BYTE;
 
 ## Simulation A DLL
 
-Using this function simulates a sensor DLL file, it has the GetBufferDataNormal function.
+Using this function simulates a sensor DLL file, it has the **GetBufferDataNormal** function.
 
 Header file: myDll.h
 
@@ -145,13 +145,13 @@ pBuffer->pValue->Decimal[5] = pBuffer->pValue->Decimal[5] + 1;
 - OS： Win7 32bit, VS2010Express
 - Open VS > File > New > Project > Visual C++ > Win32 Project > Nexe > Application type: DLL > Additional  options: Empty project, as below
 
-
+![1599835038397](D:\MyFile\mywrite\MarkdownImageLib\1599835038397.png)
 
 - Click finish
 - Add the *.h and *.c file to the project
 - At the head tool bar setting : Release Win32 (Note: the another wrapp DLL project also need same)
 - right select build solution
-- Get a DLL, it is named your project name, my is myDll.dll at release folder
+- Get a DLL, it is named your project name, my is **myDll.dll** at release folder
 
 
 
@@ -159,7 +159,7 @@ pBuffer->pValue->Decimal[5] = pBuffer->pValue->Decimal[5] + 1;
 
 This function will wrap the previous myDLL.dll, get another named “wrapper” DLL to LabVIEW call. Note: this header file decode the complex interface to sample interface.
 
-wrapperdll.h
+**wrapperdll.h**
 
 ```C
 #include <Windows.h>
@@ -330,8 +330,8 @@ Note: you DLL must same with you driver DLL file bit, 32bit or 64bit
 
 Below is the LabVIEW call results.
 
+![RUN](https://github.com/Frank-Instruments/Frank-Instruments.github.io/blob/main/C/WrapDll/LVCode.jpg)
 
 
 
-
-Done!
+**Done!**
