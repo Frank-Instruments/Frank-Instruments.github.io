@@ -48,7 +48,7 @@ typedef struct {
 	// such as -123.123456
 	/*
 	typedef struct {
-		BYTE Sign; 				// Sign +/-
+		BYTE Sign; 			// Sign +/-
 		BYTE Integer[3]; 		// 3-digit integer(no zero suppression)
 		BYTE Period;			// Decimal point(".")
 		BYTE Decimal[6];		// 6-digit decimal number
@@ -76,10 +76,10 @@ Header file: myDll.h
 
 // defined DSA
 typedef struct {
-    unsigned char Sign; 			// Sign +/-
-    unsigned char Integer[3]; 		// 3-digit integer(no zero suppression)
-    unsigned char Period;			// Decimal point(".")
-    unsigned char Decimal[6];		// 6-digit decimal number
+    unsigned char Sign; 		                // Sign +/-
+    unsigned char Integer[3]; 		                // 3-digit integer(no zero suppression)
+    unsigned char Period;		                // Decimal point(".")
+    unsigned char Decimal[6];		                // 6-digit decimal number
 } Number;
 
 typedef struct {
@@ -168,16 +168,16 @@ This function will wrap the previous myDLL.dll, get another named “wrapper” 
 
 // defined DSA
 typedef struct {
-    unsigned char Sign; 			// Sign +/-
-    unsigned char Integer[3]; 		// 3-digit integer(no zero suppression)
-    unsigned char Period;			// Decimal point(".")
-    unsigned char Decimal[6];		// 6-digit decimal number
+    unsigned char Sign; 			         // Sign +/-
+    unsigned char Integer[3]; 		                 // 3-digit integer(no zero suppression)
+    unsigned char Period;			         // Decimal point(".")
+    unsigned char Decimal[6];		                 // 6-digit decimal number
 } Number;
 
 typedef struct {
-	unsigned long TopPoint;				// such as 1
-	unsigned long EndPoint;				// such as 400
-	unsigned short dwCount;				// such as 500
+	unsigned long TopPoint;				 // such as 1
+	unsigned long EndPoint;				 // such as 400
+	unsigned short dwCount;				 // such as 500
 	
 	// such as -123.123456
 	Number* pValue;
