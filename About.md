@@ -26,4 +26,4 @@ Email: unswhw@qq.com
 
 
 
-*copyright@ unswhw@qq.com*
+*copyright@ Frank-Instruments all right reserved*
