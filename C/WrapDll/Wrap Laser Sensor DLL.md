@@ -1,4 +1,4 @@
-# Wrap Sensor DLL Driver for LabVIEW Call
+# Wrap Laser Displacement Sensor DLL Driver for LabVIEW Call
 
 **Abstract:**
 
@@ -8,11 +8,11 @@ Causes some sensor, instruments and customized equipments only have DLL driver, 
 
 
 
-## DLL Prototype Function
+## DLL API Prototype Function
 
 It is from the sensor programing manual.
 
-![1599228222625](D:\MyFile\mywrite\MarkdownImageLib\1599228222625.png)
+![Laser Sensor Driver API Interface](https://github.com/Frank-Instruments/Frank-Instruments.github.io/blob/main/C/WrapDll/Image/Driver_API_FunctionDefine.jpg)
 
 Function Return:
 
@@ -140,12 +140,12 @@ pBuffer->pValue->Decimal[5] = pBuffer->pValue->Decimal[5] + 1;
 }
 ```
 
-## Compiler Driver Dll
+## Compiler Driver DLL
 
 - OS： Win7 32bit, VS2010Express
 - Open VS > File > New > Project > Visual C++ > Win32 Project > Nexe > Application type: DLL > Additional  options: Empty project, as below
 
-![1599835038397](D:\MyFile\mywrite\MarkdownImageLib\1599835038397.png)
+![Visual Studio Project Configuration](https://github.com/Frank-Instruments/Frank-Instruments.github.io/blob/main/C/WrapDll/Image/VSProjectConfig.jpg)
 
 - Click finish
 - Add the *.h and *.c file to the project
@@ -155,7 +155,7 @@ pBuffer->pValue->Decimal[5] = pBuffer->pValue->Decimal[5] + 1;
 
 
 
-## Wrap myDll.dll
+## Wrap Driver DLL
 
 This function will wrap the previous myDLL.dll, get another named “wrapper” DLL to LabVIEW call. Note: this header file decode the complex interface to sample interface.
 
@@ -330,7 +330,7 @@ Note: you DLL must same with you driver DLL file bit, 32bit or 64bit
 
 Below is the LabVIEW call results.
 
-![RUN](https://github.com/Frank-Instruments/Frank-Instruments.github.io/blob/main/C/WrapDll/LVCode.jpg)
+![LabVIEW Run Results](https://github.com/Frank-Instruments/Frank-Instruments.github.io/blob/main/C/WrapDll/LVCode.jpg)
 
 
 
